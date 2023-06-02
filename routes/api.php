@@ -22,11 +22,11 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::controller(ProductController::class)->group(function () {
+Route::controller(ProductController::class)->middleware('jwt.auth')->group(function () {
     Route::get('/list-products', 'index')->name('list-product');
     Route::get('/product/{id}', 'view')->name('view-product');
 });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

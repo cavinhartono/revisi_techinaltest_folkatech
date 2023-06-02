@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/login', 'login');
+    Route::get('/register', 'register');
+});
+
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/products', 'index');
+    Route::get('/product/{id}', 'view');
 });

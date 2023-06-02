@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #eb3f36;
+    --secondary-color: #ffc107;
+    --white-primary: #fff;
+    --white-secondary: #f5f5f5;
+    --black-primary: #696969;
+    --black-secondary: rgba(105, 105, 105, 0.75);
+}
+
+.subtitle {
+    font-size: var(--subtitle);
+    font-weight: 700;
+}
+
+.title {
+    font-size: var(--title);
+    font-weight: 700;
+    letter-spacing: 5%;
+}
+
+.label {
+    font-size: var(--label);
+    font-weight: 500;
+    color: var(--black-primary);
+}
+
+.price {
+    font-size: var(--price);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: var(--sm) 24px;
+    margin: var(--md) 0;
+    font-size: var(--label);
+    font-weight: 400;
+    box-shadow: var(--boxShadow-primary);
+    border-radius: 8px;
+}
+
+.primary {
+    background: var(--primary-color);
+    color: var(--white-primary);
+}

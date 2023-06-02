@@ -28,7 +28,7 @@ class AuthController extends Controller
 
         if ($validator->fails()) return response()->json($validator->errors(), 422);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only(['email', 'password']);
 
         if (!$token = auth()->guard('api')->attempt($credentials)) return response()->json([
             'success' => false,
@@ -60,7 +60,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => bcrypt($request->password)
         ]);
 
         if ($user) return response()->json([

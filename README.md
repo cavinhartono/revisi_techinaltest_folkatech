@@ -116,8 +116,8 @@
 <table style="width: 100%">
   <thead>
     <tr>
-      <th>Kurang dari Satu</th>
-      <th>Lebih dari Satu</th>
+      <th>True</th>
+      <th>False</th>
     </tr>
   </thead>
   <tbody>

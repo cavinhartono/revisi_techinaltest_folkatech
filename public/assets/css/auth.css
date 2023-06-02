@@ -1,0 +1,30 @@
+@import url("./master/style.css");
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+input {
+    border: 1px solid #ddd;
+    outline: none;
+    width: 100%;
+    padding: var(--md);
+    margin-bottom: var(--md);
+    font-size: var(--sm);
+    border-radius: 8px;
+}
+
+.form {
+    position: relative;
+    width: 600px;
+    padding: 36px;
+    border-radius: 8px;
+    box-shadow: var(--boxShadow-primary);
+}
+
+.input {
+    position: relative;
+    width: 100%;
+}

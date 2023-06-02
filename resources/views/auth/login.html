@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/public/assets/css/auth.css" />
+        <!-- <link rel="stylesheet" href="{{ asset('assets/css/auth.css') }}"> -->
+        <title>Login</title>
+    </head>
+
+    <body>
+        <form action="{{ route('auth') }}" class="form">
+            <h2
+                class="title"
+                style="
+                    letter-spacing: 4%;
+                    color: var(--primary-color);
+                    margin: var(--md) 0;
+                "
+            >
+                Masuk
+            </h2>
+            <div class="input">
+                <input type="text" placeholder="Email" class="text_input" />
+            </div>
+            <div class="input">
+                <input
+                    type="password"
+                    placeholder="Password"
+                    class="text_input"
+                />
+            </div>
+            <a
+                href="#"
+                class="link"
+                style="width: 100%; text-align: end; display: block"
+                >Lupa Password?</a
+            >
+            <button class="btn primary">MASUK</button>
+            <div class="signup">
+                <p class="text">
+                    Belum punya akun?
+                    <a href="#" style="color: var(--primary-color)">
+                        Buat Akun
+                    </a>
+                </p>
+            </div>
+        </form>
+    </body>
+</html>
