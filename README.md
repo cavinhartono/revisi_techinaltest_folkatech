@@ -46,8 +46,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="" /></td>
-      <td><img src="" /></td>
+      <td><img src="./screenshot/register_true" /></td>
+      <td><img src="./screenshot/register_false" /></td>
     </tr>
   </tbody>
 </table>
@@ -84,8 +84,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="" /></td>
-      <td><img src="" /></td>
+      <td><img src="./screenshot/login_true" /></td>
+      <td><img src="./screenshot/login_register" /></td>
     </tr>
   </tbody>
 </table>
@@ -97,14 +97,14 @@
 <table style="width: 100%">
   <thead>
     <tr>
-      <th>Kurang dari Satu</th>
-      <th>Lebih dari Satu</th>
+      <th>True</th>
+      <th>False</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><img src="" /></td>
-      <td><img src="" /></td>
+      <td><img src="./screenshot/list-product_true" /></td>
+      <td><img src="./screenshot/list-product_false" /></td>
     </tr>
   </tbody>
 </table>
@@ -122,8 +122,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="" /></td>
-      <td><img src="" /></td>
+      <td><img src="./screenshot/product_true" /></td>
+      <td><img src="./screenshot/product_false" /></td>
     </tr>
   </tbody>
 </table>
