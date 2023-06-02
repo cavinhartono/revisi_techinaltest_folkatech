@@ -1,11 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
+use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
+use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenExpiredException;
+use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenInvalidException;
 
 class AuthController extends Controller
 {
@@ -67,5 +72,14 @@ class AuthController extends Controller
         return response()->json([
             'success' => false,
         ], 409);
+    }
+
+    public function logout()
+    {
+        $isToken = JWTAuth::invalidate(JWTAuth::getToken());
+
+        if ($isToken) return response()->json([
+            'success' => true, 'message' => 'Logout Berhasil!',
+        ]);
     }
 }

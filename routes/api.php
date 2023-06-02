@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::controller(AuthController::class)->group(function () {
     Route::post('/login', 'auth')->name('auth');
     Route::post('/register', 'store')->name('store');
+    Route::post('/logout', 'logout')->name('logout');
 });
 
-Route::middleware('jwt.auth')->controller(ProductController::class)->group(function () {
+Route::controller(ProductController::class)->group(function () {
     Route::get('/list-products', 'index')->name('list-product');
     Route::get('/product/{id}', 'view')->name('view-product');
 });
